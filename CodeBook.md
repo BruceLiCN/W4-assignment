@@ -1,12 +1,42 @@
-##read the needed files
-activity_labels <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/activity_labels.txt',stringsAsFactors=FALSE)
-features <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/features.txt',stringsAsFactors=FALSE)
-x_test <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/X_test.txt',stringsAsFactors=FALSE)
-y_test <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/y_test.txt',stringsAsFactors=FALSE)
-subject_test <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt',stringsAsFactors=FALSE)
-x_train <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/X_train.txt',stringsAsFactors=FALSE)
-y_train <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/y_train.txt',stringsAsFactors=FALSE)
-subject_train <- read.table('./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt',stringsAsFactors=FALSE)
+CodeBook
+==================================================
+Variable list and descriptions
+------------------------------
+
+
+Varible Name	| Description
+----------------|--------------
+finalData	| the data set we got by merging the training and the test sets
+chosenCol	| The collumns with mean() or std()
+finalDataSet1	| the data set in step 4
+finalDataSet2	| the data set in step 5
+
+other variables (variable name is the same as the name of the file that it was read from)
+activity_labels  
+features
+x_test
+y_test
+subject_test
+x_train
+y_train
+subject_train
+Analysis Process
+----------------
+
+The run_analysis.R script performs the following steps: 
+
+* 1. Merges the training and the test sets to create one data set.
+
+* 2. Extracts only the measurements on the mean and standard deviation for each measurement.
+
+* 3. Uses descriptive activity names to name the activities in the data set.
+
+* 4. Appropriately labels the data set with descriptive activity names.
+
+* 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+##The code:
 
 ##Merge the training and the test sets to create one data set.
 data_train<- cbind(subject_train,y_train,x_train)
