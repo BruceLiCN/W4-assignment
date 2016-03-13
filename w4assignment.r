@@ -51,4 +51,4 @@ View(finalDataSet1)
 View(finalDataSet2)
 
 ## create the file required in step5
-write.table(avg, file = "w4_tidy_avg_dataset.txt", sep = ",", row.name = FALSE)
+write.table(finalDataSet2, file = "w4_tidy_avg_dataset.txt", sep = ",", row.name = FALSE)
