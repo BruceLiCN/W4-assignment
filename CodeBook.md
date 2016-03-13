@@ -12,14 +12,14 @@ finalDataSet1	| the data set in step 4
 finalDataSet2	| the data set in step 5
 
 other variables (variable name is the same as the name of the file that it was read from)
-activity_labels  
-features
-x_test
-y_test
-subject_test
-x_train
-y_train
-subject_train
+activity_labels,
+features,
+x_test,
+y_test,
+subject_test,
+x_train,
+y_train,
+subject_train,
 Analysis Process
 ----------------
 
